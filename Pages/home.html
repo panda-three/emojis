@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Emoji Lab - 首页</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body class="min-h-screen bg-slate-950 text-slate-100" style="font-family: 'Inter', 'PingFang SC', 'Microsoft YaHei', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;">
+    <div class="relative overflow-hidden">
+      <div class="absolute inset-0 -z-10 bg-gradient-to-br from-slate-950 via-slate-900 to-indigo-950"></div>
+      <div class="absolute -top-32 right-0 h-96 w-96 rounded-full bg-fuchsia-500/20 blur-3xl"></div>
+      <div class="absolute bottom-0 left-0 h-96 w-96 rounded-full bg-indigo-500/20 blur-3xl"></div>
+
+      <header class="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-6">
+        <div class="flex items-center gap-3">
+          <div class="flex h-10 w-10 items-center justify-center rounded-2xl bg-gradient-to-br from-fuchsia-500 to-indigo-500">
+            <i class="fa-solid fa-face-grin-stars text-white"></i>
+          </div>
+          <div>
+            <p class="text-lg font-semibold">Emoji Lab</p>
+            <p class="text-xs text-slate-400">搞怪表情生成器</p>
+          </div>
+        </div>
+        <nav class="hidden items-center gap-8 text-sm text-slate-300 md:flex">
+          <a class="transition hover:text-white" href="#features">功能</a>
+          <a class="transition hover:text-white" href="#steps">流程</a>
+          <a class="transition hover:text-white" href="#showcase">示例</a>
+          <a class="transition hover:text-white" href="#pricing">套餐</a>
+          <a class="transition hover:text-white" href="#faq">FAQ</a>
+        </nav>
+        <div class="flex items-center gap-3">
+          <button class="hidden rounded-full border border-white/20 px-4 py-2 text-sm text-slate-200 transition hover:border-white/50 md:inline-flex">
+            登录
+          </button>
+          <button class="rounded-full bg-gradient-to-r from-fuchsia-500 to-indigo-500 px-5 py-2 text-sm font-semibold text-white shadow-lg shadow-fuchsia-500/30 transition hover:scale-[1.02]">
+            立即生成
+          </button>
+        </div>
+      </header>
+
+      <section class="mx-auto grid w-full max-w-6xl grid-cols-1 items-center gap-10 px-6 pb-16 pt-8 lg:grid-cols-2">
+        <div class="space-y-6">
+          <div class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs text-slate-200">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+            上传一张照，AI 自动出梗
+          </div>
+          <h1 class="text-4xl font-semibold leading-tight md:text-5xl">
+            把照片变成<br />
+            <span class="bg-gradient-to-r from-fuchsia-400 to-indigo-400 bg-clip-text text-transparent">炸裂表情包</span>
+          </h1>
+          <p class="text-lg text-slate-300">
+            想要效果惊艳？Emoji Lab 让你三步出图：夸张搞怪风格 + 自动梗文案，手机也能直接分享。
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <button class="rounded-full bg-white px-6 py-3 text-sm font-semibold text-slate-900 shadow-lg shadow-white/30">
+              立即生成
+            </button>
+            <button class="rounded-full border border-white/20 px-6 py-3 text-sm font-semibold text-white/90">
+              先看效果
+            </button>
+          </div>
+          <div class="flex flex-wrap gap-4 text-xs text-slate-300">
+            <span class="flex items-center gap-2"><i class="fa-solid fa-bolt text-fuchsia-400"></i>惊艳级搞怪风格</span>
+            <span class="flex items-center gap-2"><i class="fa-solid fa-comment-dots text-indigo-400"></i>自动生成梗文案</span>
+            <span class="flex items-center gap-2"><i class="fa-solid fa-mobile-screen-button text-emerald-400"></i>手机端直接分享</span>
+          </div>
+        </div>
+        <div class="relative">
+          <div class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-2xl shadow-indigo-500/20 backdrop-blur">
+            <div class="flex items-center justify-between text-xs text-slate-300">
+              <span>AI 生成预览</span>
+              <span class="rounded-full bg-emerald-500/20 px-3 py-1 text-emerald-300">5 秒出图</span>
+            </div>
+            <div class="mt-4 overflow-hidden rounded-2xl">
+              <img
+                src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1200&q=80"
+                alt="生成效果预览"
+                class="h-72 w-full object-cover"
+                loading="lazy"
+              />
+            </div>
+            <div class="mt-4 grid grid-cols-2 gap-3 text-sm">
+              <div class="rounded-2xl border border-white/10 bg-slate-950/60 p-3">
+                <p class="text-slate-400">文案 1</p>
+                <p class="mt-2 font-semibold">"我只是打了个哈欠，怎么成了梗王"</p>
+              </div>
+              <div class="rounded-2xl border border-white/10 bg-slate-950/60 p-3">
+                <p class="text-slate-400">文案 2</p>
+                <p class="mt-2 font-semibold">"老板：你很困？我：灵魂出窍中"</p>
+              </div>
+            </div>
+          </div>
+          <div class="absolute -right-6 -top-6 hidden rounded-2xl border border-white/10 bg-white/10 px-4 py-3 text-xs text-slate-200 backdrop-blur md:block">
+            <p class="font-semibold">群聊热度 +128%</p>
+            <p class="text-slate-400">最近 24 小时</p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <section class="mx-auto w-full max-w-6xl px-6 pb-12" id="features">
+      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-lg shadow-indigo-500/10">
+          <i class="fa-solid fa-face-grin-squint-tears text-2xl text-fuchsia-400"></i>
+          <h3 class="mt-4 text-lg font-semibold">AI 惊艳风格</h3>
+          <p class="mt-2 text-sm text-slate-300">夸张五官、漫画线条、鬼畜质感，一眼就想转发。</p>
+        </div>
+        <div class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-lg shadow-indigo-500/10">
+          <i class="fa-solid fa-pen-to-square text-2xl text-indigo-400"></i>
+          <h3 class="mt-4 text-lg font-semibold">自动梗文案</h3>
+          <p class="mt-2 text-sm text-slate-300">三条候选文案，支持不同语气：沙雕/毒舌/中二。</p>
+        </div>
+        <div class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-lg shadow-indigo-500/10">
+          <i class="fa-solid fa-bolt text-2xl text-emerald-400"></i>
+          <h3 class="mt-4 text-lg font-semibold">三步出图</h3>
+          <p class="mt-2 text-sm text-slate-300">上传 → 选风格 → 一键生成，无门槛造梗。</p>
+        </div>
+        <div class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-lg shadow-indigo-500/10">
+          <i class="fa-solid fa-link text-2xl text-sky-400"></i>
+          <h3 class="mt-4 text-lg font-semibold">短链分享</h3>
+          <p class="mt-2 text-sm text-slate-300">一键生成短链，支持 24h 失效策略。</p>
+        </div>
+        <div class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-lg shadow-indigo-500/10">
+          <i class="fa-solid fa-bolt text-2xl text-orange-400"></i>
+          <h3 class="mt-4 text-lg font-semibold">缓存加速</h3>
+          <p class="mt-2 text-sm text-slate-300">相同输入与参数复用，平均提速 4 秒。</p>
+        </div>
+        <div class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-lg shadow-indigo-500/10">
+          <i class="fa-solid fa-clock-rotate-left text-2xl text-rose-400"></i>
+          <h3 class="mt-4 text-lg font-semibold">作品历史</h3>
+          <p class="mt-2 text-sm text-slate-300">按风格/时间/关键词筛选，随时复用。</p>
+        </div>
+        <div class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-lg shadow-indigo-500/10">
+          <i class="fa-solid fa-user-shield text-2xl text-sky-400"></i>
+          <h3 class="mt-4 text-lg font-semibold">登录与用户体系</h3>
+          <p class="mt-2 text-sm text-slate-300">跨设备同步作品，权限与隐私可控。</p>
+        </div>
+        <div class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-lg shadow-indigo-500/10">
+          <i class="fa-solid fa-bookmark text-2xl text-fuchsia-400"></i>
+          <h3 class="mt-4 text-lg font-semibold">模板收藏</h3>
+          <p class="mt-2 text-sm text-slate-300">收藏常用风格，一键复用生成配置。</p>
+        </div>
+        <div class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-lg shadow-indigo-500/10">
+          <i class="fa-solid fa-coins text-2xl text-emerald-400"></i>
+          <h3 class="mt-4 text-lg font-semibold">额度与套餐</h3>
+          <p class="mt-2 text-sm text-slate-300">免费试用 + Pro/团队套餐，解锁更多生成。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="mx-auto w-full max-w-6xl px-6 pb-16" id="steps">
+      <div class="rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur">
+        <div class="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+          <div>
+            <h2 class="text-2xl font-semibold">三步搞定：新手也能上手</h2>
+            <p class="mt-2 text-sm text-slate-300">打开就能笑，生成后直接发。</p>
+          </div>
+          <button class="rounded-full bg-white/10 px-5 py-2 text-sm text-white">立刻体验</button>
+        </div>
+        <div class="mt-8 grid gap-6 md:grid-cols-3">
+          <div class="rounded-2xl border border-white/10 bg-slate-950/70 p-6">
+            <p class="text-xs text-slate-400">Step 1</p>
+            <h3 class="mt-2 text-lg font-semibold">上传照片</h3>
+            <p class="mt-2 text-sm text-slate-300">支持自拍、朋友照、宠物照。</p>
+          </div>
+          <div class="rounded-2xl border border-white/10 bg-slate-950/70 p-6">
+            <p class="text-xs text-slate-400">Step 2</p>
+            <h3 class="mt-2 text-lg font-semibold">选择风格强度</h3>
+            <p class="mt-2 text-sm text-slate-300">从轻度搞怪到夸张鬼畜。</p>
+          </div>
+          <div class="rounded-2xl border border-white/10 bg-slate-950/70 p-6">
+            <p class="text-xs text-slate-400">Step 3</p>
+            <h3 class="mt-2 text-lg font-semibold">一键生成</h3>
+            <p class="mt-2 text-sm text-slate-300">图 + 文案一套，直接发群。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mx-auto w-full max-w-6xl px-6 pb-16" id="showcase">
+      <div class="grid items-center gap-8 lg:grid-cols-2">
+        <div class="space-y-4">
+          <h2 class="text-2xl font-semibold">看得见的惊艳效果</h2>
+          <p class="text-sm text-slate-300">真实用户案例：自动生成文案 + 搞怪风格，一眼就想转发。</p>
+          <div class="grid gap-4 md:grid-cols-2">
+            <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
+              <p class="text-xs text-slate-400">原图</p>
+              <img
+                src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=600&q=80"
+                alt="原图"
+                class="mt-3 h-40 w-full rounded-xl object-cover"
+                loading="lazy"
+              />
+            </div>
+            <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
+              <p class="text-xs text-slate-400">生成图</p>
+              <img
+                src="https://images.unsplash.com/photo-1500917293891-ef795e70e1f6?auto=format&fit=crop&w=600&q=80"
+                alt="生成图"
+                class="mt-3 h-40 w-full rounded-xl object-cover"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="rounded-3xl border border-white/10 bg-white/5 p-6">
+          <div class="space-y-4">
+            <div class="flex items-center gap-3">
+              <div class="h-10 w-10 rounded-full bg-gradient-to-br from-fuchsia-500 to-indigo-500"></div>
+              <div>
+                <p class="text-sm font-semibold">@群聊王者</p>
+                <p class="text-xs text-slate-400">最近 5 分钟</p>
+              </div>
+            </div>
+            <p class="text-sm text-slate-200">
+              “朋友生日忘了？直接把他的照片做成表情包补救，结果全群笑到停不下来。”
+            </p>
+            <div class="rounded-2xl border border-white/10 bg-slate-950/70 p-4">
+              <p class="text-xs text-slate-400">自动文案</p>
+              <p class="mt-2 text-sm font-semibold">“我不是迟到，我是表情包灵感延迟了。”</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mx-auto w-full max-w-6xl px-6 pb-16" id="pricing">
+      <div class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+        <div>
+          <h2 class="text-2xl font-semibold">会员与套餐</h2>
+          <p class="mt-2 text-sm text-slate-300">登录解锁模板收藏、偏好同步与更高额度。</p>
+        </div>
+        <div class="flex flex-wrap gap-2 text-xs text-slate-400">
+          <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1">月付</span>
+          <span class="rounded-full border border-emerald-400/40 bg-emerald-500/10 px-3 py-1 text-emerald-200">年付省 20%</span>
+        </div>
+      </div>
+
+      <div class="mt-8 grid gap-6 lg:grid-cols-3">
+        <div class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-lg shadow-indigo-500/10">
+          <div class="flex items-center justify-between">
+            <div>
+              <p class="text-sm font-semibold">免费版</p>
+              <p class="mt-2 text-3xl font-semibold">¥0<span class="text-xs font-normal text-slate-400">/月</span></p>
+            </div>
+            <span class="rounded-full bg-white/10 px-3 py-1 text-xs text-slate-200">适合尝鲜</span>
+          </div>
+          <ul class="mt-4 space-y-2 text-sm text-slate-300">
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i>每月 50 次生成</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i>基础风格 + 自动文案</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i>24h 短链分享</li>
+          </ul>
+          <button class="mt-6 w-full rounded-full border border-white/20 px-4 py-2 text-sm text-white transition hover:border-white/50">
+            开始体验
+          </button>
+        </div>
+
+        <div class="rounded-3xl border border-fuchsia-500/40 bg-gradient-to-br from-white/10 to-white/5 p-6 shadow-2xl shadow-fuchsia-500/20 ring-1 ring-fuchsia-500/30">
+          <div class="flex items-center justify-between">
+            <div>
+              <p class="text-sm font-semibold">Pro 会员</p>
+              <p class="mt-2 text-3xl font-semibold">¥29<span class="text-xs font-normal text-slate-300">/月</span></p>
+            </div>
+            <span class="rounded-full bg-fuchsia-500/20 px-3 py-1 text-xs text-fuchsia-200">最受欢迎</span>
+          </div>
+          <ul class="mt-4 space-y-2 text-sm text-slate-200">
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-300"></i>每月 500 次生成</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-300"></i>无水印 + 高清导出</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-300"></i>模板收藏与偏好同步</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-300"></i>优先队列与更快生成</li>
+          </ul>
+          <button class="mt-6 w-full rounded-full bg-white px-4 py-2 text-sm font-semibold text-slate-900 shadow-lg shadow-white/20">
+            立即升级
+          </button>
+        </div>
+
+        <div class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-lg shadow-indigo-500/10">
+          <div class="flex items-center justify-between">
+            <div>
+              <p class="text-sm font-semibold">团队版</p>
+              <p class="mt-2 text-3xl font-semibold">¥199<span class="text-xs font-normal text-slate-400">/月</span></p>
+            </div>
+            <span class="rounded-full bg-emerald-500/20 px-3 py-1 text-xs text-emerald-200">运营团队</span>
+          </div>
+          <ul class="mt-4 space-y-2 text-sm text-slate-300">
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i>团队席位与权限管理</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i>运营看板与分享转化</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i>品牌模板库与协作</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i>API 配额与专属支持</li>
+          </ul>
+          <button class="mt-6 w-full rounded-full border border-white/20 px-4 py-2 text-sm text-white transition hover:border-white/50">
+            联系销售
+          </button>
+        </div>
+      </div>
+
+      <div class="mt-8 grid gap-4 md:grid-cols-3">
+        <div class="rounded-2xl border border-white/10 bg-slate-950/70 p-4">
+          <p class="text-xs text-slate-400">套餐优势</p>
+          <p class="mt-2 text-sm font-semibold">更高并发 + 专属加速通道</p>
+        </div>
+        <div class="rounded-2xl border border-white/10 bg-slate-950/70 p-4">
+          <p class="text-xs text-slate-400">模板权限</p>
+          <p class="mt-2 text-sm font-semibold">收藏、共享与团队复用</p>
+        </div>
+        <div class="rounded-2xl border border-white/10 bg-slate-950/70 p-4">
+          <p class="text-xs text-slate-400">结算方式</p>
+          <p class="mt-2 text-sm font-semibold">支持企业发票与对公支付</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="mx-auto w-full max-w-6xl px-6 pb-16" id="faq">
+      <div class="rounded-3xl border border-white/10 bg-white/5 p-8">
+        <h2 class="text-2xl font-semibold">常见问题</h2>
+        <div class="mt-6 space-y-4">
+          <details class="rounded-2xl border border-white/10 bg-slate-950/70 p-4">
+            <summary class="cursor-pointer text-sm font-semibold">图片会被保存吗？</summary>
+            <p class="mt-3 text-sm text-slate-300">默认 24 小时内自动清理，你可以选择即时删除。</p>
+          </details>
+          <details class="rounded-2xl border border-white/10 bg-slate-950/70 p-4">
+            <summary class="cursor-pointer text-sm font-semibold">移动端是否支持直接分享？</summary>
+            <p class="mt-3 text-sm text-slate-300">支持生成后一键分享或保存到相册。</p>
+          </details>
+          <details class="rounded-2xl border border-white/10 bg-slate-950/70 p-4">
+            <summary class="cursor-pointer text-sm font-semibold">需要复杂操作吗？</summary>
+            <p class="mt-3 text-sm text-slate-300">不需要，上传即可生成，文案自动补齐。</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <footer class="border-t border-white/10 bg-slate-950/80">
+      <div class="mx-auto flex w-full max-w-6xl flex-col gap-6 px-6 py-10 md:flex-row md:items-center md:justify-between">
+        <div>
+          <p class="text-sm font-semibold">Emoji Lab</p>
+          <p class="mt-2 text-xs text-slate-400">让每个人都能轻松造梗。</p>
+        </div>
+        <div class="flex flex-wrap gap-4 text-xs text-slate-400">
+          <span>隐私政策</span>
+          <span>使用条款</span>
+          <span>联系支持</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

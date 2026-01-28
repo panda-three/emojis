@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Emoji Lab - 原型展示看板</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body class="min-h-screen bg-slate-950 text-slate-100" style="font-family: 'Inter', 'PingFang SC', 'Microsoft YaHei', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;">
+    <div class="absolute inset-0 -z-10 bg-gradient-to-br from-slate-950 via-slate-900 to-indigo-950"></div>
+
+    <header class="mx-auto w-full max-w-6xl px-6 py-8">
+      <div class="flex items-center gap-3">
+        <div class="flex h-10 w-10 items-center justify-center rounded-2xl bg-gradient-to-br from-fuchsia-500 to-indigo-500">
+          <i class="fa-solid fa-face-grin-stars text-white"></i>
+        </div>
+        <div>
+          <p class="text-xl font-semibold">Emoji Lab 原型展示看板</p>
+          <p class="text-xs text-slate-400">高保真界面预览 · PC 尺寸模拟</p>
+        </div>
+      </div>
+    </header>
+
+    <main class="mx-auto w-full max-w-6xl space-y-10 px-6 pb-16">
+      <section class="rounded-3xl border border-white/10 bg-white/5 p-6">
+        <h2 class="text-lg font-semibold">页面清单</h2>
+        <p class="mt-2 text-sm text-slate-300">以下均为独立 HTML 页面，使用 Tailwind CDN + Font Awesome。</p>
+      </section>
+
+      <section class="grid gap-10">
+        <div class="rounded-3xl border border-white/10 bg-white/5 p-6">
+          <div class="mb-4">
+            <p class="text-sm font-semibold">Home / 首页</p>
+            <p class="text-xs text-slate-400">营销首屏、卖点、流程、FAQ</p>
+          </div>
+          <div class="overflow-auto rounded-2xl border border-white/10 bg-slate-950/70">
+            <iframe
+              src="Pages/home.html"
+              title="Home"
+              class="h-[900px] w-[1440px]"
+            ></iframe>
+          </div>
+        </div>
+
+        <div class="rounded-3xl border border-white/10 bg-white/5 p-6">
+          <div class="mb-4">
+            <p class="text-sm font-semibold">Studio / 生成工作台</p>
+            <p class="text-xs text-slate-400">上传、风格选择、强度调节、生成状态</p>
+          </div>
+          <div class="overflow-auto rounded-2xl border border-white/10 bg-slate-950/70">
+            <iframe
+              src="Pages/studio.html"
+              title="Studio"
+              class="h-[900px] w-[1440px]"
+            ></iframe>
+          </div>
+        </div>
+
+        <div class="rounded-3xl border border-white/10 bg-white/5 p-6">
+          <div class="mb-4">
+            <p class="text-sm font-semibold">Result / 生成结果</p>
+            <p class="text-xs text-slate-400">成品展示、自动文案、分享动作、变体</p>
+          </div>
+          <div class="overflow-auto rounded-2xl border border-white/10 bg-slate-950/70">
+            <iframe
+              src="Pages/result.html"
+              title="Result"
+              class="h-[900px] w-[1440px]"
+            ></iframe>
+          </div>
+        </div>
+
+        <div class="rounded-3xl border border-white/10 bg-white/5 p-6">
+          <div class="mb-4">
+            <p class="text-sm font-semibold">History / 最近作品</p>
+            <p class="text-xs text-slate-400">作品列表、过滤检索、下载与分享</p>
+          </div>
+          <div class="overflow-auto rounded-2xl border border-white/10 bg-slate-950/70">
+            <iframe
+              src="Pages/history.html"
+              title="History"
+              class="h-[900px] w-[1440px]"
+            ></iframe>
+          </div>
+        </div>
+
+        <div class="rounded-3xl border border-white/10 bg-white/5 p-6">
+          <div class="mb-4">
+            <p class="text-sm font-semibold">Ops Dashboard / 运营看板</p>
+            <p class="text-xs text-slate-400">增长漏斗、套餐结构、分享与留存</p>
+          </div>
+          <div class="overflow-auto rounded-2xl border border-white/10 bg-slate-950/70">
+            <iframe
+              src="Pages/ops-dashboard.html"
+              title="Ops Dashboard"
+              class="h-[900px] w-[1440px]"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

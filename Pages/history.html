@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Emoji Lab - 最近作品</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body class="min-h-screen bg-slate-950 text-slate-100" style="font-family: 'Inter', 'PingFang SC', 'Microsoft YaHei', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;">
+    <div class="absolute inset-0 -z-10 bg-gradient-to-br from-slate-950 via-slate-900 to-indigo-950"></div>
+
+    <header class="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-6">
+      <div class="flex items-center gap-3">
+        <div class="flex h-10 w-10 items-center justify-center rounded-2xl bg-gradient-to-br from-fuchsia-500 to-indigo-500">
+          <i class="fa-solid fa-face-grin-stars text-white"></i>
+        </div>
+        <div>
+          <p class="text-lg font-semibold">Emoji Lab</p>
+          <p class="text-xs text-slate-400">最近作品</p>
+        </div>
+      </div>
+      <div class="flex items-center gap-3">
+        <div class="hidden items-center gap-3 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs text-slate-200 md:flex">
+          <div class="flex h-6 w-6 items-center justify-center rounded-full bg-slate-900 text-[10px] font-semibold text-white">JL</div>
+          <div class="flex flex-col">
+            <span class="text-xs font-semibold">Jia · Pro</span>
+            <span class="text-[10px] text-slate-400">剩余 188 / 500</span>
+          </div>
+        </div>
+        <button class="rounded-full border border-white/20 px-4 py-2 text-sm text-slate-200">回到工作台</button>
+        <button class="rounded-full bg-gradient-to-r from-fuchsia-500 to-indigo-500 px-5 py-2 text-sm font-semibold text-white">新建生成</button>
+      </div>
+    </header>
+
+    <main class="mx-auto w-full max-w-6xl space-y-8 px-6 pb-16">
+      <section class="grid gap-4 md:grid-cols-4">
+        <div class="rounded-3xl border border-white/10 bg-white/5 p-6">
+          <p class="text-xs text-slate-400">累计生成</p>
+          <p class="mt-2 text-2xl font-semibold">128 张</p>
+          <p class="mt-2 text-xs text-emerald-300">成功率 98%</p>
+        </div>
+        <div class="rounded-3xl border border-white/10 bg-white/5 p-6">
+          <p class="text-xs text-slate-400">平均生成时间</p>
+          <p class="mt-2 text-2xl font-semibold">6.4 秒</p>
+          <p class="mt-2 text-xs text-slate-300">最近 7 天</p>
+        </div>
+        <div class="rounded-3xl border border-white/10 bg-white/5 p-6">
+          <p class="text-xs text-slate-400">最热风格</p>
+          <p class="mt-2 text-2xl font-semibold">鬼畜滤镜</p>
+          <p class="mt-2 text-xs text-fuchsia-300">分享率 +23%</p>
+        </div>
+        <div class="rounded-3xl border border-white/10 bg-white/5 p-6">
+          <p class="text-xs text-slate-400">剩余额度</p>
+          <p class="mt-2 text-2xl font-semibold">188 / 500</p>
+          <p class="mt-2 text-xs text-slate-300">重置日期 2026/02/01</p>
+        </div>
+      </section>
+
+      <section class="rounded-3xl border border-white/10 bg-white/5 p-6">
+        <div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+          <div>
+            <h2 class="text-lg font-semibold">筛选与检索</h2>
+            <p class="text-sm text-slate-300">快速定位想要的表情作品。</p>
+          </div>
+          <div class="flex flex-wrap gap-3 text-sm">
+            <input
+              type="text"
+              placeholder="搜索文案或风格"
+              class="rounded-full border border-white/10 bg-slate-950/70 px-4 py-2 text-sm text-white placeholder:text-slate-500"
+            />
+            <select class="rounded-full border border-white/10 bg-slate-950/70 px-4 py-2 text-sm text-white">
+              <option>全部风格</option>
+              <option>夸张五官</option>
+              <option>漫画线条</option>
+              <option>鬼畜滤镜</option>
+              <option>蒸汽波</option>
+            </select>
+            <select class="rounded-full border border-white/10 bg-slate-950/70 px-4 py-2 text-sm text-white">
+              <option>短链状态</option>
+              <option>有效</option>
+              <option>24h 内到期</option>
+              <option>已失效</option>
+            </select>
+            <select class="rounded-full border border-white/10 bg-slate-950/70 px-4 py-2 text-sm text-white">
+              <option>最近 7 天</option>
+              <option>最近 30 天</option>
+              <option>全部时间</option>
+            </select>
+            <select class="rounded-full border border-white/10 bg-slate-950/70 px-4 py-2 text-sm text-white">
+              <option>排序：最新</option>
+              <option>排序：最热</option>
+              <option>排序：分享最多</option>
+              <option>排序：缓存命中</option>
+            </select>
+          </div>
+        </div>
+        <div class="mt-4 grid gap-3 md:grid-cols-2">
+          <div class="rounded-2xl border border-white/10 bg-slate-950/70 p-4">
+            <div class="flex items-center justify-between text-sm">
+              <span>强度范围</span>
+              <span class="text-slate-300">30% - 90%</span>
+            </div>
+            <input class="mt-2 w-full accent-fuchsia-500" type="range" min="0" max="100" value="70" />
+          </div>
+          <div class="rounded-2xl border border-white/10 bg-slate-950/70 p-4">
+            <p class="text-sm font-semibold">快速筛选</p>
+            <div class="mt-3 flex flex-wrap gap-2 text-xs">
+              <span class="rounded-full bg-fuchsia-500/20 px-3 py-1 text-fuchsia-200">仅缓存命中</span>
+              <span class="rounded-full bg-white/5 px-3 py-1 text-slate-200">已收藏</span>
+              <span class="rounded-full bg-white/5 px-3 py-1 text-slate-200">已分享</span>
+              <span class="rounded-full bg-white/5 px-3 py-1 text-slate-200">本周热门</span>
+              <span class="rounded-full bg-white/5 px-3 py-1 text-slate-200">需要续期</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="rounded-3xl border border-white/10 bg-white/5 p-6">
+        <div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+          <div>
+            <h2 class="text-lg font-semibold">模板收藏</h2>
+            <p class="text-sm text-slate-300">保存常用参数，跨设备一键复用。</p>
+          </div>
+          <button class="rounded-full border border-white/20 px-4 py-2 text-sm text-white">新建模板</button>
+        </div>
+        <div class="mt-4 grid gap-4 md:grid-cols-3">
+          <div class="rounded-2xl border border-white/10 bg-slate-950/70 p-4">
+            <div class="flex items-center justify-between text-xs text-slate-400">
+              <span>鬼畜滤镜</span>
+              <span>强度 88%</span>
+            </div>
+            <p class="mt-3 text-sm font-semibold">群聊热梗模板</p>
+            <div class="mt-3 flex flex-wrap gap-2 text-xs">
+              <span class="rounded-full bg-fuchsia-500/20 px-2 py-1 text-fuchsia-200">沙雕</span>
+              <span class="rounded-full bg-white/10 px-2 py-1 text-slate-200">1:1</span>
+              <span class="rounded-full bg-white/10 px-2 py-1 text-slate-200">虚化背景</span>
+            </div>
+            <div class="mt-4 flex flex-wrap gap-2 text-xs">
+              <button class="rounded-full border border-white/10 px-3 py-1 text-slate-200">应用</button>
+              <button class="rounded-full border border-white/10 px-3 py-1 text-slate-200">编辑</button>
+              <button class="rounded-full border border-white/10 px-3 py-1 text-slate-200">共享</button>
+            </div>
+          </div>
+          <div class="rounded-2xl border border-white/10 bg-slate-950/70 p-4">
+            <div class="flex items-center justify-between text-xs text-slate-400">
+              <span>漫画线条</span>
+              <span>强度 60%</span>
+            </div>
+            <p class="mt-3 text-sm font-semibold">温柔吐槽模板</p>
+            <div class="mt-3 flex flex-wrap gap-2 text-xs">
+              <span class="rounded-full bg-white/10 px-2 py-1 text-slate-200">毒舌</span>
+              <span class="rounded-full bg-white/10 px-2 py-1 text-slate-200">4:3</span>
+              <span class="rounded-full bg-white/10 px-2 py-1 text-slate-200">保留原图</span>
+            </div>
+            <div class="mt-4 flex flex-wrap gap-2 text-xs">
+              <button class="rounded-full border border-white/10 px-3 py-1 text-slate-200">应用</button>
+              <button class="rounded-full border border-white/10 px-3 py-1 text-slate-200">编辑</button>
+              <button class="rounded-full border border-white/10 px-3 py-1 text-slate-200">共享</button>
+            </div>
+          </div>
+          <div class="rounded-2xl border border-white/10 bg-slate-950/70 p-4">
+            <div class="flex items-center justify-between text-xs text-slate-400">
+              <span>蒸汽波</span>
+              <span>强度 72%</span>
+            </div>
+            <p class="mt-3 text-sm font-semibold">复古出圈模板</p>
+            <div class="mt-3 flex flex-wrap gap-2 text-xs">
+              <span class="rounded-full bg-white/10 px-2 py-1 text-slate-200">中二</span>
+              <span class="rounded-full bg-white/10 px-2 py-1 text-slate-200">1:1</span>
+              <span class="rounded-full bg-white/10 px-2 py-1 text-slate-200">纯色渐变</span>
+            </div>
+            <div class="mt-4 flex flex-wrap gap-2 text-xs">
+              <button class="rounded-full border border-white/10 px-3 py-1 text-slate-200">应用</button>
+              <button class="rounded-full border border-white/10 px-3 py-1 text-slate-200">编辑</button>
+              <button class="rounded-full border border-white/10 px-3 py-1 text-slate-200">共享</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="grid gap-6 lg:grid-cols-3">
+        <article class="rounded-3xl border border-white/10 bg-white/5 p-4">
+          <img
+            src="https://images.unsplash.com/photo-1500917293891-ef795e70e1f6?auto=format&fit=crop&w=600&q=80"
+            alt="作品 1"
+            class="h-44 w-full rounded-2xl object-cover"
+            loading="lazy"
+          />
+          <div class="mt-4 space-y-2">
+            <div class="flex items-center justify-between text-xs">
+              <span class="rounded-full bg-fuchsia-500/20 px-2 py-1 text-fuchsia-200">鬼畜滤镜</span>
+              <span class="text-slate-400">2026/01/26</span>
+            </div>
+            <p class="text-sm font-semibold">“本来只是困了，结果成了梗界天花板。”</p>
+            <div class="flex flex-wrap gap-2 text-xs">
+              <span class="rounded-full bg-white/10 px-2 py-1 text-slate-200">强度 85%</span>
+              <span class="rounded-full bg-emerald-500/20 px-2 py-1 text-emerald-200">缓存命中</span>
+              <span class="rounded-full bg-orange-500/20 px-2 py-1 text-orange-200">短链剩余 6h</span>
+              <span class="rounded-full bg-amber-500/20 px-2 py-1 text-amber-200">已收藏</span>
+            </div>
+            <div class="flex gap-2 text-xs">
+              <button class="rounded-full border border-white/10 px-3 py-1">短链</button>
+              <button class="rounded-full border border-white/10 px-3 py-1">延长</button>
+              <button class="rounded-full border border-white/10 px-3 py-1">下载</button>
+              <button class="rounded-full border border-white/10 px-3 py-1">删除</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="rounded-3xl border border-white/10 bg-white/5 p-4">
+          <img
+            src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=600&q=80"
+            alt="作品 2"
+            class="h-44 w-full rounded-2xl object-cover"
+            loading="lazy"
+          />
+          <div class="mt-4 space-y-2">
+            <div class="flex items-center justify-between text-xs">
+              <span class="rounded-full bg-indigo-500/20 px-2 py-1 text-indigo-200">漫画线条</span>
+              <span class="text-slate-400">2026/01/24</span>
+            </div>
+            <p class="text-sm font-semibold">“周一不想醒，醒了就想吐槽。”</p>
+            <div class="flex flex-wrap gap-2 text-xs">
+              <span class="rounded-full bg-white/10 px-2 py-1 text-slate-200">强度 60%</span>
+              <span class="rounded-full bg-white/10 px-2 py-1 text-slate-200">未命中缓存</span>
+              <span class="rounded-full bg-emerald-500/20 px-2 py-1 text-emerald-200">短链有效</span>
+              <span class="rounded-full bg-amber-500/20 px-2 py-1 text-amber-200">已收藏</span>
+            </div>
+            <div class="flex gap-2 text-xs">
+              <button class="rounded-full border border-white/10 px-3 py-1">短链</button>
+              <button class="rounded-full border border-white/10 px-3 py-1">延长</button>
+              <button class="rounded-full border border-white/10 px-3 py-1">下载</button>
+              <button class="rounded-full border border-white/10 px-3 py-1">删除</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="rounded-3xl border border-white/10 bg-white/5 p-4">
+          <img
+            src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=600&q=80"
+            alt="作品 3"
+            class="h-44 w-full rounded-2xl object-cover"
+            loading="lazy"
+          />
+          <div class="mt-4 space-y-2">
+            <div class="flex items-center justify-between text-xs">
+              <span class="rounded-full bg-emerald-500/20 px-2 py-1 text-emerald-200">夸张五官</span>
+              <span class="text-slate-400">2026/01/21</span>
+            </div>
+            <p class="text-sm font-semibold">“求你别说了，我的表情管理已经离家出走。”</p>
+            <div class="flex flex-wrap gap-2 text-xs">
+              <span class="rounded-full bg-white/10 px-2 py-1 text-slate-200">强度 92%</span>
+              <span class="rounded-full bg-emerald-500/20 px-2 py-1 text-emerald-200">缓存命中</span>
+              <span class="rounded-full bg-slate-700 px-2 py-1 text-slate-200">短链已失效</span>
+              <span class="rounded-full bg-amber-500/20 px-2 py-1 text-amber-200">已收藏</span>
+            </div>
+            <div class="flex gap-2 text-xs">
+              <button class="rounded-full border border-white/10 px-3 py-1">短链</button>
+              <button class="rounded-full border border-white/10 px-3 py-1">延长</button>
+              <button class="rounded-full border border-white/10 px-3 py-1">下载</button>
+              <button class="rounded-full border border-white/10 px-3 py-1">删除</button>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>

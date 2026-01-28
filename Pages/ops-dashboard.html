@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Emoji Lab - 运营看板</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body class="min-h-screen bg-slate-950 text-slate-100" style="font-family: 'Inter', 'PingFang SC', 'Microsoft YaHei', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;">
+    <div class="absolute inset-0 -z-10 bg-gradient-to-br from-slate-950 via-slate-900 to-indigo-950"></div>
+
+    <header class="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-6">
+      <div class="flex items-center gap-3">
+        <div class="flex h-10 w-10 items-center justify-center rounded-2xl bg-gradient-to-br from-fuchsia-500 to-indigo-500">
+          <i class="fa-solid fa-chart-line text-white"></i>
+        </div>
+        <div>
+          <p class="text-lg font-semibold">Emoji Lab</p>
+          <p class="text-xs text-slate-400">运营看板</p>
+        </div>
+      </div>
+      <div class="flex items-center gap-3">
+        <div class="hidden items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs text-slate-200 md:flex">
+          <i class="fa-solid fa-calendar-days text-slate-400"></i>
+          <span>2025/12/30 - 2026/01/28</span>
+        </div>
+        <button class="rounded-full border border-white/20 px-4 py-2 text-sm text-slate-200">导出报告</button>
+        <span class="rounded-full bg-emerald-500/20 px-3 py-1 text-xs text-emerald-200">实时更新</span>
+      </div>
+    </header>
+
+    <main class="mx-auto w-full max-w-6xl space-y-8 px-6 pb-16">
+      <section class="grid gap-4 md:grid-cols-4">
+        <div class="rounded-3xl border border-white/10 bg-white/5 p-6">
+          <p class="text-xs text-slate-400">本期生成次数</p>
+          <p class="mt-2 text-2xl font-semibold">42,840</p>
+          <p class="mt-2 text-xs text-emerald-300">环比 +18%</p>
+        </div>
+        <div class="rounded-3xl border border-white/10 bg-white/5 p-6">
+          <p class="text-xs text-slate-400">活跃用户</p>
+          <p class="mt-2 text-2xl font-semibold">8,216</p>
+          <p class="mt-2 text-xs text-slate-300">DAU / MAU 31%</p>
+        </div>
+        <div class="rounded-3xl border border-white/10 bg-white/5 p-6">
+          <p class="text-xs text-slate-400">分享率</p>
+          <p class="mt-2 text-2xl font-semibold">27.4%</p>
+          <p class="mt-2 text-xs text-fuchsia-300">分享带来 2,130 次回流</p>
+        </div>
+        <div class="rounded-3xl border border-white/10 bg-white/5 p-6">
+          <p class="text-xs text-slate-400">MRR</p>
+          <p class="mt-2 text-2xl font-semibold">¥128,400</p>
+          <p class="mt-2 text-xs text-emerald-300">付费转化 3.6%</p>
+        </div>
+      </section>
+
+      <section class="rounded-3xl border border-white/10 bg-white/5 p-6">
+        <div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+          <div>
+            <h2 class="text-lg font-semibold">增长漏斗</h2>
+            <p class="text-sm text-slate-300">从访问到付费的转化路径。</p>
+          </div>
+          <div class="flex flex-wrap gap-2 text-xs text-slate-400">
+            <span class="rounded-full bg-white/10 px-3 py-1">整体转化 3.6%</span>
+            <span class="rounded-full bg-fuchsia-500/20 px-3 py-1 text-fuchsia-200">分享驱动 41%</span>
+          </div>
+        </div>
+        <div class="mt-6 grid gap-4 md:grid-cols-5">
+          <div class="rounded-2xl border border-white/10 bg-slate-950/70 p-4">
+            <p class="text-xs text-slate-400">访问</p>
+            <p class="mt-2 text-lg font-semibold">120k</p>
+            <p class="mt-2 text-xs text-slate-400">100%</p>
+          </div>
+          <div class="rounded-2xl border border-white/10 bg-slate-950/70 p-4">
+            <p class="text-xs text-slate-400">上传</p>
+            <p class="mt-2 text-lg font-semibold">68k</p>
+            <p class="mt-2 text-xs text-slate-400">56%</p>
+          </div>
+          <div class="rounded-2xl border border-white/10 bg-slate-950/70 p-4">
+            <p class="text-xs text-slate-400">生成成功</p>
+            <p class="mt-2 text-lg font-semibold">61k</p>
+            <p class="mt-2 text-xs text-slate-400">90%</p>
+          </div>
+          <div class="rounded-2xl border border-white/10 bg-slate-950/70 p-4">
+            <p class="text-xs text-slate-400">分享</p>
+            <p class="mt-2 text-lg font-semibold">16.7k</p>
+            <p class="mt-2 text-xs text-slate-400">27%</p>
+          </div>
+          <div class="rounded-2xl border border-white/10 bg-slate-950/70 p-4">
+            <p class="text-xs text-slate-400">付费</p>
+            <p class="mt-2 text-lg font-semibold">4.3k</p>
+            <p class="mt-2 text-xs text-slate-400">3.6%</p>
+          </div>
+        </div>
+        <div class="mt-6 rounded-2xl border border-white/10 bg-slate-950/70 p-4">
+          <div class="flex items-center justify-between text-xs text-slate-400">
+            <span>生成 → 分享 转化</span>
+            <span>27% · 目标 30%</span>
+          </div>
+          <div class="mt-2 h-2 rounded-full bg-slate-800">
+            <div class="h-2 w-[60%] rounded-full bg-gradient-to-r from-fuchsia-500 to-indigo-500"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="grid gap-6 lg:grid-cols-3">
+        <div class="rounded-3xl border border-white/10 bg-white/5 p-6">
+          <h2 class="text-lg font-semibold">套餐结构</h2>
+          <p class="mt-2 text-sm text-slate-300">付费用户组成与 ARPU。</p>
+          <div class="mt-4 space-y-3 text-sm">
+            <div class="flex items-center justify-between">
+              <span class="text-slate-300">免费版</span>
+              <span class="text-slate-200">68%</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="text-slate-300">Pro 会员</span>
+              <span class="text-slate-200">26%</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="text-slate-300">团队版</span>
+              <span class="text-slate-200">6%</span>
+            </div>
+          </div>
+          <div class="mt-4 rounded-2xl border border-white/10 bg-slate-950/70 p-4">
+            <p class="text-xs text-slate-400">ARPU</p>
+            <p class="mt-2 text-lg font-semibold">¥62.5</p>
+            <p class="mt-1 text-xs text-slate-400">团队版 LTV 最高</p>
+          </div>
+        </div>
+
+        <div class="rounded-3xl border border-white/10 bg-white/5 p-6">
+          <h2 class="text-lg font-semibold">渠道表现</h2>
+          <p class="mt-2 text-sm text-slate-300">带来最多分享与转化的渠道。</p>
+          <div class="mt-4 space-y-3 text-sm text-slate-300">
+            <div class="flex items-center justify-between rounded-2xl border border-white/10 bg-slate-950/70 p-3">
+              <span>微信</span>
+              <span class="text-emerald-300">分享率 38%</span>
+            </div>
+            <div class="flex items-center justify-between rounded-2xl border border-white/10 bg-slate-950/70 p-3">
+              <span>QQ</span>
+              <span class="text-emerald-300">分享率 26%</span>
+            </div>
+            <div class="flex items-center justify-between rounded-2xl border border-white/10 bg-slate-950/70 p-3">
+              <span>Telegram</span>
+              <span class="text-emerald-300">分享率 19%</span>
+            </div>
+            <div class="flex items-center justify-between rounded-2xl border border-white/10 bg-slate-950/70 p-3">
+              <span>短链复制</span>
+              <span class="text-emerald-300">分享率 14%</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="rounded-3xl border border-white/10 bg-white/5 p-6">
+          <h2 class="text-lg font-semibold">风格热度</h2>
+          <p class="mt-2 text-sm text-slate-300">最受欢迎的生成风格。</p>
+          <div class="mt-4 space-y-3">
+            <div class="flex items-center justify-between text-sm">
+              <span class="text-slate-300">鬼畜滤镜</span>
+              <span class="text-slate-200">32%</span>
+            </div>
+            <div class="flex items-center justify-between text-sm">
+              <span class="text-slate-300">漫画线条</span>
+              <span class="text-slate-200">24%</span>
+            </div>
+            <div class="flex items-center justify-between text-sm">
+              <span class="text-slate-300">夸张五官</span>
+              <span class="text-slate-200">21%</span>
+            </div>
+            <div class="flex items-center justify-between text-sm">
+              <span class="text-slate-300">蒸汽波</span>
+              <span class="text-slate-200">13%</span>
+            </div>
+          </div>
+          <div class="mt-4 rounded-2xl border border-white/10 bg-slate-950/70 p-4">
+            <p class="text-xs text-slate-400">热门模板</p>
+            <p class="mt-2 text-sm font-semibold">群聊热梗模板 · 分享率 +42%</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="rounded-3xl border border-white/10 bg-white/5 p-6">
+        <div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+          <div>
+            <h2 class="text-lg font-semibold">留存与口碑</h2>
+            <p class="text-sm text-slate-300">近 7 日留存与复访情况。</p>
+          </div>
+          <button class="rounded-full border border-white/20 px-4 py-2 text-sm text-white">查看完整报告</button>
+        </div>
+        <div class="mt-4 grid gap-4 md:grid-cols-4">
+          <div class="rounded-2xl border border-white/10 bg-slate-950/70 p-4">
+            <p class="text-xs text-slate-400">D1 留存</p>
+            <p class="mt-2 text-lg font-semibold">32%</p>
+          </div>
+          <div class="rounded-2xl border border-white/10 bg-slate-950/70 p-4">
+            <p class="text-xs text-slate-400">D7 留存</p>
+            <p class="mt-2 text-lg font-semibold">18%</p>
+          </div>
+          <div class="rounded-2xl border border-white/10 bg-slate-950/70 p-4">
+            <p class="text-xs text-slate-400">复访率</p>
+            <p class="mt-2 text-lg font-semibold">41%</p>
+          </div>
+          <div class="rounded-2xl border border-white/10 bg-slate-950/70 p-4">
+            <p class="text-xs text-slate-400">客服满意度</p>
+            <p class="mt-2 text-lg font-semibold">4.8 / 5</p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

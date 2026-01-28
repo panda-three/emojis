@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Emoji Lab - 生成工作台</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body class="min-h-screen bg-slate-950 text-slate-100" style="font-family: 'Inter', 'PingFang SC', 'Microsoft YaHei', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;">
+    <div class="absolute inset-0 -z-10 bg-gradient-to-br from-slate-950 via-slate-900 to-indigo-950"></div>
+
+    <header class="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-6">
+      <div class="flex items-center gap-3">
+        <div class="flex h-10 w-10 items-center justify-center rounded-2xl bg-gradient-to-br from-fuchsia-500 to-indigo-500">
+          <i class="fa-solid fa-face-grin-stars text-white"></i>
+        </div>
+        <div>
+          <p class="text-lg font-semibold">Emoji Lab Studio</p>
+          <p class="text-xs text-slate-400">生成工作台</p>
+        </div>
+      </div>
+      <div class="flex items-center gap-3">
+        <div class="hidden items-center gap-3 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs text-slate-200 md:flex">
+          <div class="flex h-6 w-6 items-center justify-center rounded-full bg-slate-900 text-[10px] font-semibold text-white">JL</div>
+          <div class="flex flex-col">
+            <span class="text-xs font-semibold">Jia · Pro</span>
+            <span class="text-[10px] text-slate-400">剩余 188 / 500</span>
+          </div>
+          <span class="rounded-full bg-emerald-500/20 px-2 py-1 text-[10px] text-emerald-200">优先队列</span>
+        </div>
+        <button class="rounded-full border border-white/20 px-4 py-2 text-sm text-slate-200">返回首页</button>
+        <button class="rounded-full bg-gradient-to-r from-fuchsia-500 to-indigo-500 px-5 py-2 text-sm font-semibold text-white">一键生成</button>
+      </div>
+    </header>
+
+    <main class="mx-auto grid w-full max-w-6xl gap-8 px-6 pb-16 lg:grid-cols-2">
+      <section class="space-y-6">
+        <div class="rounded-3xl border border-white/10 bg-white/5 p-6">
+          <h2 class="text-lg font-semibold">上传照片</h2>
+          <p class="mt-2 text-sm text-slate-300">支持 JPG / PNG，建议正脸，分辨率 ≥ 800px。</p>
+          <label class="mt-4 flex h-56 cursor-pointer flex-col items-center justify-center rounded-2xl border border-dashed border-white/20 bg-slate-950/60 text-center transition hover:border-fuchsia-400">
+            <i class="fa-solid fa-cloud-arrow-up text-2xl text-fuchsia-400"></i>
+            <p class="mt-3 text-sm font-semibold">拖拽图片到这里，或点击上传</p>
+            <p class="mt-1 text-xs text-slate-400">最大 10MB</p>
+            <input class="hidden" type="file" accept="image/*" />
+          </label>
+        </div>
+
+        <div class="rounded-3xl border border-white/10 bg-white/5 p-6">
+          <div class="flex items-center justify-between">
+            <h2 class="text-lg font-semibold">预览</h2>
+            <span class="rounded-full bg-emerald-500/20 px-3 py-1 text-xs text-emerald-300">检测到人脸</span>
+          </div>
+          <div class="mt-4 overflow-hidden rounded-2xl">
+            <img
+              src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1200&q=80"
+              alt="上传预览"
+              class="h-64 w-full object-cover"
+              loading="lazy"
+            />
+          </div>
+          <div class="mt-4 grid grid-cols-2 gap-3 text-xs text-slate-300">
+            <div class="rounded-2xl border border-white/10 bg-slate-950/70 p-3">
+              <p class="text-slate-400">识别结果</p>
+              <p class="mt-2 font-semibold">正脸 / 光线良好</p>
+            </div>
+            <div class="rounded-2xl border border-white/10 bg-slate-950/70 p-3">
+              <p class="text-slate-400">推荐风格</p>
+              <p class="mt-2 font-semibold">漫画鬼畜</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="space-y-6">
+        <div class="rounded-3xl border border-white/10 bg-white/5 p-6">
+          <div class="flex items-center justify-between">
+            <div>
+              <h2 class="text-lg font-semibold">账号与额度</h2>
+              <p class="mt-1 text-xs text-slate-400">本月额度 500 次 · 已用 312 次</p>
+            </div>
+            <span class="rounded-full bg-emerald-500/20 px-3 py-1 text-xs text-emerald-300">PRO</span>
+          </div>
+          <div class="mt-4">
+            <div class="flex items-center justify-between text-xs text-slate-400">
+              <span>额度使用</span>
+              <span>62%</span>
+            </div>
+            <div class="mt-2 h-2 rounded-full bg-slate-800">
+              <div class="h-2 w-3/5 rounded-full bg-gradient-to-r from-emerald-400 to-fuchsia-500"></div>
+            </div>
+          </div>
+          <div class="mt-4 grid gap-3 text-xs text-slate-300 md:grid-cols-2">
+            <div class="rounded-2xl border border-white/10 bg-slate-950/70 p-3">
+              <p class="text-slate-400">下次重置</p>
+              <p class="mt-2 font-semibold">2026/02/01</p>
+            </div>
+            <div class="rounded-2xl border border-white/10 bg-slate-950/70 p-3">
+              <p class="text-slate-400">并发通道</p>
+              <p class="mt-2 font-semibold">优先队列</p>
+            </div>
+          </div>
+          <div class="mt-4 flex flex-wrap gap-3 text-sm">
+            <button class="rounded-full bg-white px-4 py-2 text-slate-900">升级套餐</button>
+            <button class="rounded-full border border-white/20 px-4 py-2 text-white">查看账单</button>
+          </div>
+        </div>
+
+        <div class="rounded-3xl border border-white/10 bg-white/5 p-6">
+          <h2 class="text-lg font-semibold">选择搞怪风格</h2>
+          <div class="mt-4 flex flex-wrap gap-3 text-sm">
+            <button class="rounded-full border border-fuchsia-400/60 bg-fuchsia-500/20 px-4 py-2 text-fuchsia-200">夸张五官</button>
+            <button class="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-slate-200">漫画线条</button>
+            <button class="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-slate-200">复古像素</button>
+            <button class="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-slate-200">鬼畜滤镜</button>
+            <button class="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-slate-200">蒸汽波</button>
+          </div>
+
+          <div class="mt-6 space-y-4">
+            <div>
+              <div class="flex items-center justify-between text-sm">
+                <span>风格强度</span>
+                <span class="text-slate-300">85%</span>
+              </div>
+              <input class="mt-2 w-full accent-fuchsia-500" type="range" min="0" max="100" value="85" />
+            </div>
+            <div class="flex items-center justify-between rounded-2xl border border-white/10 bg-slate-950/70 p-4">
+              <div>
+                <p class="text-sm font-semibold">自动生成梗文案</p>
+                <p class="text-xs text-slate-400">至少输出 3 条</p>
+              </div>
+              <label class="relative inline-flex cursor-pointer items-center">
+                <input type="checkbox" class="peer sr-only" checked />
+                <div class="h-6 w-11 rounded-full bg-slate-700 peer-checked:bg-fuchsia-500"></div>
+                <span class="absolute left-1 top-1 h-4 w-4 rounded-full bg-white transition peer-checked:translate-x-5"></span>
+              </label>
+            </div>
+            <div class="rounded-2xl border border-white/10 bg-slate-950/70 p-4">
+              <p class="text-sm font-semibold">文案语气</p>
+              <div class="mt-3 flex flex-wrap gap-2 text-xs">
+                <span class="rounded-full bg-fuchsia-500/20 px-3 py-1 text-fuchsia-200">沙雕</span>
+                <span class="rounded-full bg-white/5 px-3 py-1 text-slate-200">毒舌</span>
+                <span class="rounded-full bg-white/5 px-3 py-1 text-slate-200">中二</span>
+                <span class="rounded-full bg-white/5 px-3 py-1 text-slate-200">萌系</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="rounded-3xl border border-white/10 bg-white/5 p-6">
+          <div class="flex items-center justify-between">
+            <h2 class="text-lg font-semibold">高级参数</h2>
+            <span class="text-xs text-slate-400">可保存为模板</span>
+          </div>
+          <div class="mt-4 space-y-4">
+            <div>
+              <div class="flex items-center justify-between text-sm">
+                <span>表情夸张度</span>
+                <span class="text-slate-300">70%</span>
+              </div>
+              <input class="mt-2 w-full accent-fuchsia-500" type="range" min="0" max="100" value="70" />
+            </div>
+            <div>
+              <div class="flex items-center justify-between text-sm">
+                <span>线条浓度</span>
+                <span class="text-slate-300">55%</span>
+              </div>
+              <input class="mt-2 w-full accent-fuchsia-500" type="range" min="0" max="100" value="55" />
+            </div>
+            <div class="grid gap-3 md:grid-cols-2">
+              <label class="space-y-2 text-sm">
+                <span>背景处理</span>
+                <select class="w-full rounded-2xl border border-white/10 bg-slate-950/70 px-4 py-2 text-sm text-white">
+                  <option>保留原图</option>
+                  <option>虚化背景</option>
+                  <option>纯色渐变</option>
+                  <option>AI 合成</option>
+                </select>
+              </label>
+              <label class="space-y-2 text-sm">
+                <span>输出比例</span>
+                <div class="flex flex-wrap gap-2 text-xs">
+                  <span class="rounded-full bg-fuchsia-500/20 px-3 py-1 text-fuchsia-200">1:1</span>
+                  <span class="rounded-full bg-white/5 px-3 py-1 text-slate-200">4:3</span>
+                  <span class="rounded-full bg-white/5 px-3 py-1 text-slate-200">9:16</span>
+                </div>
+              </label>
+            </div>
+            <div class="flex flex-wrap items-center justify-between gap-3 rounded-2xl border border-white/10 bg-slate-950/70 p-4">
+              <div>
+                <p class="text-sm font-semibold">贴纸与文字</p>
+                <p class="text-xs text-slate-400">自动加成更有梗</p>
+              </div>
+              <div class="flex flex-wrap gap-2 text-xs">
+                <span class="rounded-full bg-white/5 px-3 py-1 text-slate-200">关闭</span>
+                <span class="rounded-full bg-fuchsia-500/20 px-3 py-1 text-fuchsia-200">少量</span>
+                <span class="rounded-full bg-white/5 px-3 py-1 text-slate-200">丰富</span>
+              </div>
+            </div>
+            <div class="flex items-center justify-between rounded-2xl border border-white/10 bg-slate-950/70 p-4">
+              <div>
+                <p class="text-sm font-semibold">保留原色</p>
+                <p class="text-xs text-slate-400">减少色彩漂移</p>
+              </div>
+              <label class="relative inline-flex cursor-pointer items-center">
+                <input type="checkbox" class="peer sr-only" checked />
+                <div class="h-6 w-11 rounded-full bg-slate-700 peer-checked:bg-fuchsia-500"></div>
+                <span class="absolute left-1 top-1 h-4 w-4 rounded-full bg-white transition peer-checked:translate-x-5"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="rounded-3xl border border-white/10 bg-white/5 p-6">
+          <div class="flex items-center justify-between">
+            <h2 class="text-lg font-semibold">模板收藏与偏好</h2>
+            <span class="text-xs text-slate-400">已收藏 6 个</span>
+          </div>
+          <div class="mt-4 space-y-3">
+            <div class="flex items-center justify-between rounded-2xl border border-white/10 bg-slate-950/70 p-4">
+              <div>
+                <p class="text-sm font-semibold">鬼畜滤镜 · 群聊热梗</p>
+                <p class="mt-1 text-xs text-slate-400">强度 88% · 沙雕文案</p>
+              </div>
+              <button class="rounded-full border border-white/10 px-3 py-1 text-xs text-slate-200">应用</button>
+            </div>
+            <div class="flex items-center justify-between rounded-2xl border border-white/10 bg-slate-950/70 p-4">
+              <div>
+                <p class="text-sm font-semibold">漫画线条 · 温柔吐槽</p>
+                <p class="mt-1 text-xs text-slate-400">强度 60% · 毒舌文案</p>
+              </div>
+              <button class="rounded-full border border-white/10 px-3 py-1 text-xs text-slate-200">应用</button>
+            </div>
+            <div class="flex items-center justify-between rounded-2xl border border-white/10 bg-slate-950/70 p-4">
+              <div>
+                <p class="text-sm font-semibold">蒸汽波 · 复古滤镜</p>
+                <p class="mt-1 text-xs text-slate-400">强度 72% · 中二文案</p>
+              </div>
+              <button class="rounded-full border border-white/10 px-3 py-1 text-xs text-slate-200">应用</button>
+            </div>
+          </div>
+          <div class="mt-4 rounded-2xl border border-white/10 bg-slate-950/70 p-4">
+            <p class="text-sm font-semibold">默认偏好</p>
+            <div class="mt-3 flex flex-wrap gap-2 text-xs">
+              <span class="rounded-full bg-fuchsia-500/20 px-3 py-1 text-fuchsia-200">风格：漫画线条</span>
+              <span class="rounded-full bg-white/5 px-3 py-1 text-slate-200">强度：70%</span>
+              <span class="rounded-full bg-white/5 px-3 py-1 text-slate-200">文案：沙雕</span>
+              <span class="rounded-full bg-white/5 px-3 py-1 text-slate-200">输出：1:1</span>
+            </div>
+            <div class="mt-4 flex items-center justify-between text-xs text-slate-300">
+              <span>自动保存新模板</span>
+              <label class="relative inline-flex cursor-pointer items-center">
+                <input type="checkbox" class="peer sr-only" checked />
+                <div class="h-6 w-11 rounded-full bg-slate-700 peer-checked:bg-fuchsia-500"></div>
+                <span class="absolute left-1 top-1 h-4 w-4 rounded-full bg-white transition peer-checked:translate-x-5"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="rounded-3xl border border-white/10 bg-white/5 p-6">
+          <div class="flex items-center justify-between">
+            <h2 class="text-lg font-semibold">生成状态</h2>
+            <span class="text-xs text-slate-400">预计 7 秒</span>
+          </div>
+          <div class="mt-4">
+            <div class="flex items-center justify-between text-xs text-slate-400">
+              <span>正在生成表情包</span>
+              <span>63%</span>
+            </div>
+            <div class="mt-2 h-2 rounded-full bg-slate-800">
+              <div class="h-2 w-2/3 rounded-full bg-gradient-to-r from-fuchsia-500 to-indigo-500"></div>
+            </div>
+          </div>
+          <div class="mt-5 grid gap-3 text-xs text-slate-300 md:grid-cols-2">
+            <div class="rounded-2xl border border-white/10 bg-slate-950/70 p-3">
+              <p class="text-slate-400">队列位置</p>
+              <p class="mt-2 font-semibold">第 2 位</p>
+            </div>
+            <div class="rounded-2xl border border-white/10 bg-slate-950/70 p-3">
+              <p class="text-slate-400">缓存命中</p>
+              <p class="mt-2 font-semibold">已加速 35%</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="rounded-3xl border border-white/10 bg-white/5 p-6">
+          <div class="flex items-center justify-between">
+            <h2 class="text-lg font-semibold">缓存与复用</h2>
+            <span class="rounded-full bg-emerald-500/20 px-3 py-1 text-xs text-emerald-300">已启用</span>
+          </div>
+          <div class="mt-4 space-y-3">
+            <div class="flex items-center justify-between rounded-2xl border border-white/10 bg-slate-950/70 p-4">
+              <div>
+                <p class="text-sm font-semibold">相同输入与参数复用</p>
+                <p class="text-xs text-slate-400">命中后直接返回历史结果</p>
+              </div>
+              <label class="relative inline-flex cursor-pointer items-center">
+                <input type="checkbox" class="peer sr-only" checked />
+                <div class="h-6 w-11 rounded-full bg-slate-700 peer-checked:bg-fuchsia-500"></div>
+                <span class="absolute left-1 top-1 h-4 w-4 rounded-full bg-white transition peer-checked:translate-x-5"></span>
+              </label>
+            </div>
+            <div class="grid gap-3 text-xs text-slate-300 md:grid-cols-2">
+              <div class="rounded-2xl border border-white/10 bg-slate-950/70 p-3">
+                <p class="text-slate-400">本次预估命中率</p>
+                <p class="mt-2 font-semibold">62%</p>
+              </div>
+              <div class="rounded-2xl border border-white/10 bg-slate-950/70 p-3">
+                <p class="text-slate-400">平均节省时长</p>
+                <p class="mt-2 font-semibold">4.2 秒</p>
+              </div>
+            </div>
+            <div class="flex flex-wrap items-center justify-between gap-2 text-xs text-slate-400">
+              <span>缓存版本：v2.1</span>
+              <span>最近更新：10 分钟前</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="rounded-3xl border border-white/10 bg-white/5 p-6">
+          <h2 class="text-lg font-semibold">创作小贴士</h2>
+          <ul class="mt-3 space-y-3 text-sm text-slate-300">
+            <li class="flex items-start gap-3"><i class="fa-solid fa-lightbulb text-fuchsia-400"></i>尽量使用正脸照片，表情越明显越好笑。</li>
+            <li class="flex items-start gap-3"><i class="fa-solid fa-lightbulb text-fuchsia-400"></i>风格强度高于 70%，效果更夸张。</li>
+            <li class="flex items-start gap-3"><i class="fa-solid fa-lightbulb text-fuchsia-400"></i>文案语气选“毒舌”适合群聊互怼。</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
