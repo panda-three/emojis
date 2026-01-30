@@ -31,3 +31,4 @@ This is a static HTML prototype with no build step. Use any of the following to 
 ## Security & Configuration Notes
 - External CDNs are required for Tailwind and icons; ensure availability in the target deployment environment.
 - If moving to self‑hosted assets, place them under `emoji/` or a new `assets/` folder and update references accordingly.
+- Vercel 部署时如需将首页指向真实页面，请在 `vercel.json` 添加 rewrite：`/` → `/Pages/home.html`，并按需映射 `/studio`、`/result`、`/history`、`/ops-dashboard` 到对应的 HTML。

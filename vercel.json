@@ -1,0 +1,9 @@
+{
+  "rewrites": [
+    { "source": "/", "destination": "/Pages/home.html" },
+    { "source": "/studio", "destination": "/Pages/studio.html" },
+    { "source": "/result", "destination": "/Pages/result.html" },
+    { "source": "/history", "destination": "/Pages/history.html" },
+    { "source": "/ops-dashboard", "destination": "/Pages/ops-dashboard.html" }
+  ]
+}
